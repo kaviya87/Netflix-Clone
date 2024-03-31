@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+  }
+  body {
+    background: black;
+    color: white;
+  }
+  .header {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url(header-image.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  .logo {
+    width: 150px;
+    cursor: pointer;
+  }
+  nav button {
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: white;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  #select{
+    border: ipx solid rgb(234, 232, 232);
+    background: black;
+    color: white;
+    padding: 7px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  .language-btn {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid white;
+    padding: 7px 10px;
+  }
+  .language-btn img {
+    width: 10px;
+    margin-left: 10px;
+  }
+  .header-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 100px;
+    width: auto;
+  }
+  .psaa {
+    font-size: 40px;
+    font-weight: 1000;
+    text-align: center;
+    white-space: nowrap;
+  }
+  
+  .header-content p {
+    font-size: 20px;
+    font-weight: 400px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .email-signup {
+    border-radius: 4px;
+    display: flex;
+    margin-top: 30px;
+    overflow: hidden;
+    width: 550px;
+    margin-left: 25%;
+  }
+  .email-signup input {
+    flex: 1;
+    border: 1px solid white;
+    border-radius: 4px;
+    padding-left: 20px;
+    background-color: transparent;
+    font-size: 17px;
+    color: white;
+    font-weight: 50px;
+    outline: none;
+  }
+  .email-signup button {
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 4px;
+  }
+  .features {
+    padding: 50px 12%;
+    font-size: 22px;
+    padding-left: 0;
+    padding-right: 0;
+    border-top: 8px solid #333;
+  }
+  
+  .row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-left: 190px;
+    padding-right: 190px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .features .row {
+    border-bottom: 8px solid #333;
+  }
+  .features .row:last-child {
+    border-bottom: none;
+  }
+  .text-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+  .img-col {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+  .img-col img {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+  .features h2 {
+    font-size: 47px;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .faq {
+    padding: 10px 12%;
+    text-align: center;
+    font-size: 18px;
+    padding: 50px 15% 3%;
+    border-top: 8px solid #333;
+  }
+  .faq h2 {
+    font-weight: 800;
+    font-size: 50px;
+  }
+  .accordion {
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+  }
+  .accordion li {
+    list-style: none;
+    width: 145%;
+    padding: 5px;
+    margin-left: -180px;
+  }
+  .accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+  }
+  label::after {
+    content: "+";
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 03s;
+  }
+  input[type="radio"] {
+    display: none;
+  }
+  .accordion .content {
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s, padding 0.3s;
+  }
+  .accordion input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 30px 20px;
+  }
+  .accordion input[type="radio"]:checked + label::after {
+    transform: rotate(135deg);
+    transition: transform 0.1s;
+  }
+  
+  .faq .email-signup {
+    max-width: 600px;
+    margin: 20px auto 60px;
+  }
+  .faq small {
+    font-size: 20px;
+  }
+  .footer {
+    padding-left: 170px;
+    padding-bottom: 55px;
+    padding-top: 50px;
+    color: #e3dfdf;
+    border-top: 8px solid #333;
+  }
+  .footer h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .footer .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+  }
+  .footer .col a {
+    display: block;
+    color: #e3dfdf;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .footer .row {
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+  .footer .language-btn {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 3px;
+  }
+  .copyright-txt {
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 600px) {
+    .header {
+      padding: 10px 4%;
+    }
+  
+    .logo {
+      width: 100px;
+    }
+    #startlang{
+      padding: 7px 10px;
+      font-size: 0; 
+    }
+    #startlang img {
+      width: 10px;
+      margin-left: 10px;
+    }  
+    nav button {
+      padding: 7px 10px;
+      font-size: 12px;
+    }
+  
+    .language-btn {
+      padding: 7px 10px;
+    }
+  
+    .header-content {
+      top: 20%;
+      padding-top: 50px;
+    }
+    .small{
+      font-size:3px;
+    }
+    .psaa {
+      font-size: 30px;
+      text-align: center;
+      white-space: normal;
+      line-height: 1.5;
+      margin-left:80px;
+      margin-right: 80px;
+      margin-top: 180px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .join{
+      padding-left: 170px;
+      padding-right: 170px;
+      line-height: 1.5;
+      padding-top: 20px;
+    }
+    .header-content p {
+      font-size: 16px; 
+      margin-bottom:20px;
+    }
+    .email-signup {
+      flex-direction: column; 
+      margin-top: 10px;
+    }
+    .email-signup input {
+      width: 50%;
+      font-size: 16px;
+      padding: 10px;
+      padding-right: -390px;
+      padding-left: 14px;
+      margin-left: 65px;
+    }
+    .email-signup button {
+      font-size: 16px;
+      margin-right: 280px;
+      margin-left: 140px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: left;
+      padding-left: 16px;
+      background-color: #ce1616;
+      margin-top: -5px;
+    }
+    #email {
+      flex-direction: column; 
+      margin-top: 10px;
+    }
+    #email input {
+      width: 50%;
+      font-size: 16px;
+      padding: 10px;
+      padding-right: -390px;
+      padding-left: 14px;
+      margin-left: 1px;
+      margin-right: 40px;
+    }
+    #email button {
+      font-size: 16px;
+      margin-right: 340px;
+      margin-left: 60px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      text-align: left;
+      padding-left: 16px;
+      background-color: #ce1616;
+      
+    }
+    .ready{
+      font-size: 17px;
+      margin-left: 93px;
+      margin-right: 82px;
+    }
+    .features h2 {
+      font-size: 30px;
+      margin-left: 10px;
+    }
+    
+    .features p {
+      font-size: 14px;
+      margin-left: 10px;
+    }
+    #Enjoy{
+      margin-top: -20px;
+      padding-left: 70px;
+    }
+    .Download{
+      margin-top: 30px;
+      padding-right: 34px;
+      padding-left: 36px;
+      font-weight: 300;
+      text-align: center;
+    }
+    .row {
+      flex-direction: column; 
+      align-items: center; 
+      padding: 10px 0;
+    }
+    .text-col p{
+      margin-left: 66px;
+      margin-right: 70px;
+      font-size: 17px;
+      text-align: center;
+      margin-bottom: -10px;
+    }
+    .img-col {
+      order: 2; 
+    }
+  
+    .img-col img {
+      width: 70%; 
+    }
+    .faq {
+      padding: 10px 4%;
+      margin-right: 2px;
+    }
+    .faq h2 {
+      font-size: 30px;
+      font-weight: 700;
+      text-align: center;
+      margin-left: 4px;
+      margin: 10px;
+    }
+    .accordion li {
+      width: 100%; 
+      padding: 10px;
+      margin: -13px 0;
+      padding-right: 13px;
+      padding-left: 15px;
+    }
+    .accordion{
+      margin-top: 25px;
+    }
+    .accordion .content {
+      font-size: 16px;
+      padding: 20px;
+    }
+    .accordion .content {
+      font-size: 16px;
+      padding: 15px;
+    }
+    .accordion li label {
+      padding: 20px;
+      font-size: 16px;
+    }
+    
+    label::after {
+      font-size: 24px;
+    }
+    .accordion input[type="radio"] {
+      display: none; 
+    }
+  
+    .accordion input[type="radio"] + label::after {
+      content: "+"; 
+    }
+  
+    .accordion input[type="radio"]:checked + label::after {
+      content: "-"; 
+    }
+  
+    .accordion .content {
+      display: none; 
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s, padding 0.3s;
+    }
+  
+    .accordion input[type="radio"]:checked + label + .content {
+      display: block; 
+      max-height: 600px;
+      padding: 30px 20px;
+    }
+    .footer {
+      padding-left: 19px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-right: 2px;
+    }
+  
+    .footer h2 {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    .col {
+      flex: 0 0 calc(50% - 10px); 
+      margin-bottom: 10px;
+    }
+    .footer .col {
+      flex: 0 0 48%; 
+      margin-bottom: 10px;
+    }
+    .footer .col a {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .copyright-txt {
+      font-size: 12px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  
